@@ -33,7 +33,4 @@ print_top_30_tickers()
 schedule.every(15).minutes.do(print_top_30_tickers)
 
 if __name__ == "__main__":
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
     app.run(debug=False)
