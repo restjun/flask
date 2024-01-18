@@ -35,4 +35,4 @@ if __name__ == "__main__":
     while True:
         schedule.run_pending()
         time.sleep(1)
-        app.run(debug=True)
+    app.run(debug=True, use_reloader=False)  # use_reloader=False를 추가하여 자동 재시작을 방지
