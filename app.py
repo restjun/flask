@@ -32,12 +32,8 @@ print_top_30_tickers()
 # 15분마다 실행되도록 스케줄 설정
 schedule.every(15).minutes.do(print_top_30_tickers)
 
-@app.route("/")
-def index():
-    return render_template('index.html')
-
 if __name__ == "__main__":
     while True:
         schedule.run_pending()
         time.sleep(1)
-    app.run(debug=True)
+    app.run(debug=False)
