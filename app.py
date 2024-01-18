@@ -32,10 +32,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    # Flask 앱 실행 (자동 재시작 방지)
-    app.run(debug=True, use_reloader=False)
-
-    # 스케줄러 실행
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+    # Flask 
